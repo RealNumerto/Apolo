@@ -663,6 +663,6 @@ bot.Command({
 bot.Command({
 name: "invites",
 code: `
-$inviteInfo[discord.gg/AyhUg68Hl;author]
+$inviteInfo[discord.gg/xZqHNJdYwt;channel]
 `
 })
