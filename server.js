@@ -659,3 +659,10 @@ bot.Command({
   aloo
   `
 })
+
+bot.Command({
+name: "invites",
+code: `
+$inviteInfo[discord.gg/AyhUg68Hl;author]
+`
+})
