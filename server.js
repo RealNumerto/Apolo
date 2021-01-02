@@ -661,19 +661,13 @@ bot.Command({
 })
 
 bot.Command({
-  name: "guild-info",
+  name: "serverinfo",
   code: `$title[$serverName[]]
-  $description[Owner
-  <@$ownerID>
-  Creation Date
-  $creationDate[$guildID;guild]
-  Region
-  $region
-  Boost Level
-  $serverBoostLevel[]
-  Boost Count
-  $serverBoostCount[]
-  Server Verification Level
-  $serverVerificationLvl[]
+  $description[$addField[Owner;<@$ownerID>]
+  $addField[Creation Date;$creationDate[$guildID;guild]]
+  $addField[Region;$region]
+  $addField[Boost Level;$serverBoostLevel[]]
+  $addField[Boost Count;$serverBoostCount[]]
+  $addField[Server Verification Level;$serverVerificationLvl[]]]
 `
 })
