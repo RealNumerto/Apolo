@@ -549,7 +549,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "info1",
+  name: "@info1",
   code: `
   $author[INFORMACIJE;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
   $thumbnail[https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
@@ -570,7 +570,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "info2",
+  name: "@info2",
   code: `
   $author[POSLEDICE;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
   $thumbnail[https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
@@ -585,7 +585,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "info3",
+  name: "@info3",
   code: `
   $author[ROLOVI;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
   $thumbnail[https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
@@ -612,7 +612,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "info4",
+  name: "@info4",
   code: `
   $author[BOOSTOVI;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
   $thumbnail[https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
@@ -629,7 +629,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "image",
+  name: "@image",
   code: `
   $color[ffff00]
   $description[]
@@ -638,7 +638,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "pravila",
+  name: "@pravila",
   code: `
   $author[PRAVILA!!!;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
   $footer[Grimsy™ Community;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
@@ -654,7 +654,7 @@ bot.Command({
   })
 
 bot.Command({
-  name: "lol",
+  name: "@lol",
   code: `
   aloo
   `
