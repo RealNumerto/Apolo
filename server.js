@@ -659,3 +659,21 @@ bot.Command({
   aloo
   `
 })
+
+bot.Command({
+  name: "guild-info",
+  code: `$title[$serverName[]]
+  $description[Owner
+  <@$ownerID>
+  Creation Date
+  $creationDate[$guildID;guild]
+  Region
+  $region
+  Boost Level
+  $serverBoostLevel[]
+  Boost Count
+  $serverBoostCount[]
+  Server Verification Level
+  $serverVerificationLvl[]
+`
+})
