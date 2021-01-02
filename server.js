@@ -157,7 +157,7 @@ $title[Pomoc]
 $footer[Grimsy™ Community;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
 $color[$random[0;999999]]
 $description[
-$addField[Komande za membere;<a:point:781135170052292609> ***help clanovi** (ovde su sve komande koje clanovi Kamcatka Community-a mogu da koriste)]
+$addField[Komande za membere;<a:point:781135170052292609> ***help clanovi** (ovde su sve komande koje clanovi Grimsy Community-a mogu da koriste)]
 $addField[Komande za staff;<a:point:781135170052292609> ***help staff** (ako si deo staffa moci ces da koristis ovu komandu)]]
 $onlyIf[$message[1]!=clanovi;{execute:clanovi}]
 $onlyIf[$message[1]!=staff;{execute:staff}]
