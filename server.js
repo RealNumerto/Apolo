@@ -671,3 +671,11 @@ bot.Command({
   $addField[Server Verification Level;$serverVerificationLvl[]]]
 `
 })
+
+bot.Command({
+  name: "acc",
+  code: `
+  @everyone Ako nekome treba <@452811602723471390> neka kontaktira <@795025051203928084> zato sto je acc od <@452811602723471390> malo sjeban pa ce koristiti <@795025051203928084> acc dokle god ne popravi svoj.
+  $useChannel[685591674071810097]
+  `
+})
