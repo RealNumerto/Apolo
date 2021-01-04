@@ -374,7 +374,7 @@ bot.Command({
   $title[Avatar]
   $color[$random[0;999999]]
   $description[]
-  $image[$replaceText[$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]];.gif?size=128;.png?size=4096]]
+  $image[$replaceText[$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]];.webp?size=128;.png?size=4096]]
   $onlyForChannels[685378188322537475;695712075758043136;695712157009969254;<@$authorID> komande koristi u <#685378188322537475>!]
   `
 })
