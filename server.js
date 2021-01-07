@@ -266,7 +266,7 @@ bot.SpaceCommand({
   name: "randomemoji",
   code: `
   $setUserVar[req;$multi[$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];2]]
-  Cestitam <@$replaceText[$findUser[$message[]];undefined;$authorID]>!!! Rank up si se do Rank: **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
+  Cestitam <@$replaceText[$findUser[$message[]];undefined;$authorID]>!!! Level up si se do levela: **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
   $setUserVar[rank;$sum[$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]];1]]
   $onlyIf[$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]>=$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];]
   $setUserVar[msg;$sum[$getUserVar[msg];1]]
@@ -447,12 +447,12 @@ bot.Command({
 })
 
 bot.Command({
-  name: "level",
+  name: "poeni",
   code: `
-  $title[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]] Level]
+  $title[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]] Poeni]
   $color[$random[0;999999]]
   $description[
-  <@$replaceText[$findUser[$message[]];undefined;$authorID]> ima: **$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]** levela!!!]
+  <@$replaceText[$findUser[$message[]];undefined;$authorID]> ima: **$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]** poena!!!]
   `
 })
 
@@ -465,19 +465,19 @@ $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nem
 })
 
 bot.Command({
-  name: "rank",
+  name: "level",
   code: `
-  $title[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]] Rank]
+  $title[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]] Level]
   $color[$random[0;999999]]
   $description[
-  <@$replaceText[$findUser[$message[]];undefined;$authorID]> rank je **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
-  Za rank up potrebno je **$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]\`/\`$sum[$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];300]** levela skupiti!!!]
+  <@$replaceText[$findUser[$message[]];undefined;$authorID]> level je **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
+  Za level up potrebno je **$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]\`/\`$sum[$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];300]** poena skupiti!!!]
   $replyIn[1s]
   `
 })
 
 bot.Command({
-  name: "rank",
+  name: "level",
   code: `
   Ucitava se....
   `
@@ -502,8 +502,8 @@ bot.Command({
   $color[$random[0;999999]]
   $description[
   $addField[Broj Poruka:;**$getUserVar[msg;$replaceText[$findUser[$message[]];undefined;$authorID]]**]
-  $addField[Broj Levela:;**$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]**]
-  $addField[Rank:;**$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**]]
+  $addField[Broj Poena:;**$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]**]
+  $addField[Level:;**$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**]]
   `
 })
 
