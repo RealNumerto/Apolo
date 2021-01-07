@@ -44,17 +44,16 @@ bot.MessageEditEvent()
 bot.JoinedCommand({
 name: "782754905932562446",
 code: `
-$author[Apolo Community™;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
+$author[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $description[
 👤 **|** Novi clan:
 **$username[]#$discriminator[]**
 <@$authorID>
 🙋 **|** Dobrodosao/la na __**Apolo Community™**__
 ‼️ **|** Pre nego sto pocnes da se dopisujes procitaj:
-<#685377074856198155>
-<#787774074771603486>
+<#782771992733810698>
 ☑️ **|** Zabavi se na serveru i uzivaj]
-$footer[Apolo Community™;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
+$footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $image[https://media.discordapp.net/attachments/794585038812479539/796688512955056158/Apolo_gif_banner.gif]
 $useChannel[782754905932562446]
 `
@@ -153,10 +152,10 @@ bot.Command({
   name: "help",
   code: `
 $title[Pomoc]
-$footer[Grimsy™ Community;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
+$footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
 $description[
-$addField[Komande za membere;<a:point:781135170052292609> **!!help clanovi** (ovde su sve komande koje clanovi Grimsy Community-a mogu da koriste)]
+$addField[Komande za membere;<a:point:781135170052292609> **!!help clanovi** (ovde su sve komande koje clanovi Apolo Community-a mogu da koriste)]
 $addField[Komande za staff;<a:point:781135170052292609> **!!help staff** (ako si deo staffa moci ces da koristis ovu komandu)]]
 $onlyIf[$message[1]!=clanovi;{execute:clanovi}]
 $onlyIf[$message[1]!=staff;{execute:staff}]
@@ -167,9 +166,9 @@ bot.ExecutableCommand({
   name: "clanovi",
   code: `
 $title[Clanovi Pomoc]
-$footer[Grimsy™ Community - strana 1/2 (da vidis drugu stranu kucaj > *help clanovi 2 <);https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
+$footer[Apolo Community™ - strana 1/2 (da vidis drugu stranu kucaj > !!help clanovi 2 <);https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
-$description[<a:point:781135170052292609> ** !!pitaj** - ako hoces da se zajebavas sa botom u <#685378188322537475> (odgovori su skroz random) (vecinom nemaju smisla).
+$description[<a:point:781135170052292609> ** !!pitaj** - ako hoces da se zajebavas sa botom (odgovori su skroz random) (vecinom nemaju smisla).
 <a:point:781135170052292609> ** !!procenat** - ako hoces da ti bot odgovori na pitanje u procentima. (odgovori su skroz random) (vecinom nemaju smisla).
 <a:point:781135170052292609> ** !!avatar ili !!av** - da vidis svoj ili neciji avatar
 <a:point:781135170052292609> ** !!botinfo** - da dobije informacije o **Apolo™** botu.
@@ -186,7 +185,7 @@ bot.ExecutableCommand({
   name: "clanovi2",
   code: `
   $title[Pomoc Clanovi]
-  $footer[Grimsy™ Community - strana 2/2;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
+  $footer[Aplo Community™ - strana 2/2;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
   $color[$random[0;999999]]
   $description[<a:point:781135170052292609> **Trenutno je ova stranica prazna. Nove komande ce biti uskoro dodate. Hvala.**]
   `
@@ -196,14 +195,14 @@ bot.ExecutableCommand({
   name: "staff",
   code: `
 $title[Staff Pomoc]
-$footer[Grimsy™ Community;https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
+$footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
 $description[<a:point:781135170052292609> ** !!obrisi** - Ova komanda je za brisanje poruka
 <a:point:781135170052292609> ** !!mute** - da mutiras nekoga na neko vreme
 <a:point:781135170052292609> ** !!unmute** - da unmutiras nekoga
 <a:point:781135170052292609> ** !!ban** - da banujes nekoga
 <a:point:781135170052292609> ** !!unban** - da unbanujes nekoga]
-$onlyForRoles[685126634738679826;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -246,7 +245,7 @@ $description[]
 $addField[Dostupni odgovori;Ne <a:up:781134690060075008> **|** Da <a:down:781134657919778816>;true]
 $addField[Kako glasati?;Kliknite nesto od ponudjenih reakcija dole;no]
 $addField[Glasanje;Jedno glasanje po memberu. Ako hocete da promenite svoje misljenje onda kliknite reakciju koju ste prethodno stisnuli pa onda novu. Hvala :heart:;no]
-$footer[Kada procitate sve onda glasajte!:https://cdn.discordapp.com/attachments/685892246251241605/792385125090066442/grimsy_logo_gif_3.gif]
+$footer[Kada procitate sve onda glasajte!:https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $addField[Tema:;**$message[]**;no]
 $addReactions[781134690060075008;781134657919778816]
 $argsCheck[>1;**nisi tacno napisao komandu - Probaj ovako: !!predlog {napisi sta hoces za glasanje}**]
@@ -257,7 +256,7 @@ $argsCheck[>1;**nisi tacno napisao komandu - Probaj ovako: !!predlog {napisi sta
 bot.SpaceCommand({
 name: "mentionhelp",
 code: `
-Pozdrav <@$authorID> Moj prefix je \`*\`, a da vidis sve komande kucaj \`*help\`
+Pozdrav <@$authorID> Moj prefix je \`!!\`, a da vidis sve komande kucaj \`!!help\`
 $onlyIfMessageContains[<@!$client[id]>;<@!$client[id]>;]
 `
 })
@@ -293,7 +292,7 @@ bot.Command({
   $color[$random[0;999999]]
   $description[Obrisano **$message[1]** poruka]
   $clear[$message[]]
-  $onlyIf[$message[1]!=;Pogresno napisana komanda. Probaj ** !!obrisi (neki broj)**. () ne trebas da koristis]
+  $onlyIf[$message[1]!=;Pogresno napisana komanda. Probaj: ** !!obrisi (neki broj)**. () ne trebas da koristis]
   $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
   `
 })
@@ -327,7 +326,7 @@ $channelSendMessage[$channelID[];<@$mentioned[1]> je mutiran na **$message[2]**.
 Razlog: **$messageSlice[>2]**]
 $giveRole[$mentioned[1];$roleID[Muted]]
 $setUserVar[autounmute;yes;$mentioned[1]]
-$argsCheck[>2;Nisi dobro napisao komandu. Probaj **!!mute (@username) (na koliko mute) (razlog)**. () ne trebas da koristis]
+$argsCheck[>2;Pogresno napisana komanda. Probaj: **!!mute (@username) (na koliko mute) (razlog)**. () ne trebas da koristis]
 $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;782780772196024351;782777593639862273;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
@@ -343,7 +342,7 @@ Razlog: **$messageSlice[>1]**]
   $setUserVar[autounmute;no;$mentioned[1]]
   $onlyIf[$getUserVar[autounmute;$mentioned[1]]==yes;$username[$mentioned[1]]#$discriminator[$mentioned[1]] nije mutiran/a]
   $onlyIf[$hasRole[$mentioned[1];$roleID[Muted]]!=;Ova osoba nije mutirana]
-  $argsCheck[>1;Pogresno napisana komanda. Probaj ovako **!!unmute (@user) (razlog)**. () ne trebas da koristis]
+  $argsCheck[>1;Pogresno napisana komanda. Probaj: **!!unmute (@user) (razlog)**. () ne trebas da koristis]
   $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;782780772196024351;782777593639862273;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
   `
 })
@@ -383,7 +382,7 @@ $ban[$findUser[$message[1]];$messageSlice[>1]]
 $onlyIf[$findUser[$message[1]]!=$ownerID;{title:Ban Error}{description:Dobar pokusaj. Ne mozes da banujes server vlasnika.}]
 $onlyIf[$findUser[$message[1]]!=$client[id];{title:Ban Error}{description:Banaj me ako mozes xD. Ne mogu ja da banam sam sebe.}]
 $onlyIf[$findUser[$message[1]]!=$authorID;{title:Ban Error}{description:Ne mozes da banujes sebe. LoL}]
-$argsCheck[>1;Nisi dobro napisao komandu. Probaj **!!ban (@username) (razlog)**. () ne trebas da koristis]
+$argsCheck[>1;Pogresno napisana komanda. Probaj: **!!ban (@username) (razlog)**. () ne trebas da koristis]
 $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
@@ -407,7 +406,7 @@ bot.Command({
   $channelSendMessage[$channelID[];**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan.
 Razlog: **$messageSlice[>1]**]
 $unban[$message[1];$messageSlice[>1]]
-$argsCheck[>1;Nisi dobro napisao komandu. Probaj **!!unban (USER ID) (razlog)**. () ne trebas da koristis]
+$argsCheck[>1;Pogresno napisana komanda. Probaj: **!!unban (USER ID) (razlog)**. () ne trebas da koristis]
 $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
@@ -431,7 +430,7 @@ $color[$random[0;999999]]
 $description[Nick od <@$mentioned[1]> je promenjen u **$messageSlice[>1]**]
 $setNickname[$mentioned[1];$messageSlice[>1]]
 $onlyIf[$message[2]!=;**Ukucaj neki nick da bi promenuo!!!**]
-$onlyIf[$userExists[$mentioned[1]]==true;Nisi dobro napisao komandu. Probaj ovako **!!nick (@user) (nick)**. () ne trebas da koristis]
+$onlyIf[$userExists[$mentioned[1]]==true;Pogresno napisana komanda. Probaj: **!!nick (@user) (nick)**. () ne trebas da koristis]
 $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
