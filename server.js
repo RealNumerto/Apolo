@@ -472,7 +472,7 @@ bot.Command({
   $color[$random[0;999999]]
   $description[
   <@$replaceText[$findUser[$message[]];undefined;$authorID]> rank je **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
-  Za rank up potrebno je **$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]/$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]]** levela skupiti!!!]
+  Za rank up potrebno je **$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]\`/\`$sum[$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];300]** levela skupiti!!!]
   $replyIn[1s]
   `
 })
