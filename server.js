@@ -177,7 +177,8 @@ $description[<a:point:781135170052292609> ** !!pitaj** - ako hoces da se zajebav
 <a:point:781135170052292609> ** !!level** - da vidite koliko levela imate.
 <a:point:781135170052292609> ** !!rank** - da vidite koji ste rank.
 <a:point:781135170052292609> ** !!profil** - da vidite profil od nekoga ili od sebe, vidite njegov/njen level, rank i poruke koliko ima.
-<a:point:781135170052292609> ** !!userinfo** - Informacije o nekome (kada je usao/la na server, kada je napravljen acc).]
+<a:point:781135170052292609> ** !!userinfo** - Informacije o nekome (kada je usao/la na server, kada je napravljen acc).
+<a:point:781135170052292609> ** !!serverinfo** - Informacije o serveru.]
 $onlyIf[$message[2]!=2;{execute:clanovi2}]
 `
 })
@@ -636,11 +637,11 @@ bot.Command({
 bot.Command({
   name: "serverinfo",
   code: `$title[$serverName[]]
-  $description[$addField[Owner;<@$ownerID>]
-  $addField[Creation Date;$creationDate[$guildID;guild]]
-  $addField[Region;$region]
+  $description[$addField[Server Verification Level;$serverVerificationLvl[]]
   $addField[Boost Level;$serverBoostLevel[]]
   $addField[Boost Count;$serverBoostCount[]]
-  $addField[Server Verification Level;$serverVerificationLvl[]]]
+  $addField[Region;$region]
+  $addField[Creation Date;$creationDate[$guildID[];guild]]
+  $addField[Owner;<@$ownerID>]]
 `
 })
