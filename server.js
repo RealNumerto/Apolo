@@ -52,7 +52,7 @@ $description[
 🙋 **|** Dobrodošao/la na __**Apolo Community™**__
 ‼️ **|** Pre nego što počnes da se dopisujes pročitaj:
 <#782771992733810698>
-🔢 **|** **$membersCount[human].** clanova na serveru
+🔢 **|** **$membersCount[human].** članova na serveru
 ☑️ **|** Zabavi se na serveru i uživaj]
 $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $image[https://media.discordapp.net/attachments/794585038812479539/796688512955056158/Apolo_gif_banner.gif]
@@ -269,8 +269,6 @@ bot.SpaceCommand({
   Cestitam <@$replaceText[$findUser[$message[]];undefined;$authorID]>!!! Rank up si se do Rank: **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
   $setUserVar[rank;$sum[$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]];1]]
   $onlyIf[$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]>=$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];]
-  $addCmdReactions[$randomText[781135052217909278;781134586045923368;781134148899045386;781134197397127211;781134234529562625;781134276682842122;781134320089563147;781134370840641548;781134426431422464;781134515400605767;781134551123623938;781134619927642142;781134722562654231;781134754115747860;781134791993983016;781134829597097994;781134867320143882;781134902975397918;781134930880626690;781134959838494731;781134985339600897;781135015702167562;781135089924702218;781135138931081216;781135229557145602;781135258710966273;781135400952528916;781135422792663040;781135447609835550;781135478325641237;781135540812382258;781135584822689822;781135639264493568;781135728603561994;781135753668460574;781135783389429761]]
-  $onlyIf[$random[1;25]==3;]
   $setUserVar[msg;$sum[$getUserVar[msg];1]]
   $setUserVar[lvl;$sum[$getUserVar[lvl];$random[10;30]]]
   `
