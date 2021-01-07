@@ -46,13 +46,14 @@ name: "782754905932562446",
 code: `
 $author[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $description[
-👤 **|** Novi clan:
+👤 **|** Novi član:
 **$username[]#$discriminator[]**
 <@$authorID>
-🙋 **|** Dobrodosao/la na __**Apolo Community™**__
-‼️ **|** Pre nego sto pocnes da se dopisujes procitaj:
+🙋 **|** Dobrodošao/la na __**Apolo Community™**__
+‼️ **|** Pre nego što počnes da se dopisujes pročitaj:
 <#782771992733810698>
-☑️ **|** Zabavi se na serveru i uzivaj]
+🔢 **|** **$membersCount[human].** clanova na serveru
+☑️ **|** Zabavi se na serveru i uživaj]
 $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $image[https://media.discordapp.net/attachments/794585038812479539/796688512955056158/Apolo_gif_banner.gif]
 $useChannel[782754905932562446]
