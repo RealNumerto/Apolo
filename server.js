@@ -50,7 +50,7 @@ $description[
 **$username[]#$discriminator[]**
 <@$authorID>
 🙋 **|** Dobrodošao/la na __**Apolo Community™**__
-‼️ **|** Pre nego što počnes da se dopisujes pročitaj:
+‼️ **|** Pre nego što počnes da se dopisuješ pročitaj:
 <#782771992733810698>
 🔢 **|** **$membersCount[human].** članova na serveru
 ☑️ **|** Zabavi se na serveru i uživaj]
