@@ -647,7 +647,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "info1",
+  name: "@info1",
   code: `
   $author[Informacije o serveru...;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
   $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
@@ -672,7 +672,7 @@ $description[:white_check_mark: Dobrodošli na Apolo Community:tm: discord serve
 })
 
 bot.Command({
-  name: "info2",
+  name: "@info2",
   code: `
   $author[Pravila;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
   $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
@@ -693,7 +693,7 @@ $description[:warning: Zabranjeno je vredjanje, omalovažavanje, rasizam, psovan
 })
 
 bot.Command({
-  name: "info3",
+  name: "@info3",
   code: `
   $author[Posledice;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
   $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
