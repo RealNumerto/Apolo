@@ -645,3 +645,64 @@ bot.Command({
   $addField[Owner;<@$ownerID>]]
 `
 })
+
+bot.Command({
+  name: "info1",
+  code: `
+  $author[Informacije o serveru...;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$description[:white_check_mark: Dobrodošli na Apolo Community:tm: discord server.
+ 
+:white_check_mark: Server je aktivno počeo sa radom :one:.januara :two::zero::two::one:.godine.
+ 
+:white_check_mark: Ovaj server je napravljen u svrhu upoznavanja i okupljanja ljudi svih nacionalnosti na jedno mesto.
+ 
+:white_check_mark: Imamo Custom bota, koji se zove Apolo:tm:.
+ 
+:white_check_mark: Aktivan staff 24/7.
+ 
+:white_check_mark: Giveawayevi.
+ 
+:white_check_mark: Prijave za staff.
+ 
+:white_check_mark: U glavnom na serveru su svi dobrodošli, ali pravila i staff na serveru se moraju poštovati inače ćete biti warnovani ili muteovani, pravila i posledice će biti navedeni u ovom kanalu.
+ 
+:white_check_mark: Server ima još puno opcija zabave, koje ćete sami otkriti.]
+  `
+})
+
+bot.Command({
+  name: "info2",
+  code: `
+  $author[Pravila;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$description[:warning: Zabranjeno je vredjanje, omalovažavanje, rasizam, psovanje.
+
+ :warning: Zabranjeno je spamovanje.
+
+ :warning: Zabranjeno je duvati u mikrofon
+
+ :warning: Zabranjeno je igranje igrica u glavnom chatu.
+
+ :warning: Zabranjeno je raspravljati se sa staff timom o postojećim pravilima.
+
+ :warning: Zabranjeno je puštati muziku u glavnom chatu.
+
+ :warning:  Zabranjen DM Advertising na serveru.]
+  `
+})
+
+bot.Command({
+  name: "info3",
+  code: `
+  $author[Posledice;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$description[:no_entry_sign: Ispod navedene posledice kršenja pravila koji su navedeni iznad ove poruke.
+
+:no_entry_sign: 𝟐 𝐖𝐚𝐫𝐧𝐚 = 𝟏𝟎 𝐦𝐢𝐧𝐮𝐭𝐚 𝐦𝐮𝐭𝐞.
+
+:no_entry_sign: 𝟓 𝐖𝐚𝐫𝐧𝐨𝐯𝐚 = 𝐁𝐚𝐧.
+
+:radioactive:Vrlo jednostavno i logično ne kršite navedena pravila gore i sve će biti okej :).]
+  `
+})
