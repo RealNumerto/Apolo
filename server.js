@@ -186,7 +186,6 @@ $description[<a:point:781135170052292609> ** !!play** - Pustajte muziku u Voice 
 <a:point:781135170052292609> ** !!queue** - Da vidite pesme/muzike koje su u playlisti.
 <a:point:781135170052292609> ** !!clear-queue** - Da obrisete celu playlistu.
 <a:point:781135170052292609> ** !!shuffle** - Da izmesate redosled playliste.
-<a:point:781135170052292609> ** !!nowplaying** - Da vidite koja pesma trenutno ide.
 <a:point:781135170052292609> ** !!loop** - Da bi omogucili ili onemogucili ponavljanje muzike.
 <a:point:781135170052292609> ** !!volume** - Da postavite jacinu muzike.
 <a:point:781135170052292609> ** !!skip** - Da predjete na sledecu musizku.
