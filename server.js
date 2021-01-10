@@ -166,7 +166,7 @@ $color[$random[0;999999]]
 $description[
 $addField[Komande za membere;<a:point:781135170052292609> **!!help clanovi** (Ovde su sve komande koje clanovi Apolo Community-a mogu da koriste)]
 $addField[Komande za staff;<a:point:781135170052292609> **!!help staff** (Ako si deo staffa moci ces da koristis ovu komandu)]
-$addField[Komande za staff;<a:point:781135170052292609> **!!help music** (Ovde su komande za pustanje muzike preko naseg bota)]]
+$addField[Komande za muziku;<a:point:781135170052292609> **!!help music** (Ovde su komande za pustanje muzike preko naseg bota)]]
 $onlyIf[$message[1]!=clanovi;{execute:clanovi}]
 $onlyIf[$message[1]!=staff;{execute:staff}]
 $onlyIf[$message[1]!=music;{execute:music}]
@@ -176,7 +176,7 @@ $onlyIf[$message[1]!=music;{execute:music}]
 bot.ExecutableCommand({
   name: "music",
   code: `
-  $title[Clanovi Pomoc]
+  $title[Music Pomoc]
 $footer[Apolo Community™ - strana 1/2 (da vidis drugu stranu kucaj > !!help clanovi 2 <);https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
 $description[<a:point:781135170052292609> ** !!play** - Pustajte muziku u Voice Kanalu.
