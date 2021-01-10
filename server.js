@@ -177,7 +177,7 @@ bot.ExecutableCommand({
   name: "music",
   code: `
   $title[Music Pomoc]
-$footer[Apolo Community™ - strana 1/2 (da vidis drugu stranu kucaj > !!help clanovi 2 <);https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$footer[Apolo Community™ Music;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
 $description[<a:point:781135170052292609> ** !!play** - Pustajte muziku u Voice Kanalu.
 <a:point:781135170052292609> ** !!search** - Slicno kao \`!!play\` samo sto ovde kada kucate koju muziku hocete bot vam ponudi vise opcija dok sa \`!!play\` bot pusti brvu muziku koju vidi.
