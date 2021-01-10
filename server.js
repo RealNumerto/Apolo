@@ -157,7 +157,8 @@ $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812
 $color[$random[0;999999]]
 $description[
 $addField[Komande za membere;<a:point:781135170052292609> **!!help clanovi** (ovde su sve komande koje clanovi Apolo Community-a mogu da koriste)]
-$addField[Komande za staff;<a:point:781135170052292609> **!!help staff** (ako si deo staffa moci ces da koristis ovu komandu)]]
+$addField[Komande za staff;<a:point:781135170052292609> **!!help staff** (ako si deo staffa moci ces da koristis ovu komandu)]
+$addField[Komande za staff;<a:point:781135170052292609> **!!help music** (ako si deo staffa moci ces da koristis ovu komandu)]]
 $onlyIf[$message[1]!=clanovi;{execute:clanovi}]
 $onlyIf[$message[1]!=staff;{execute:staff}]
 `
