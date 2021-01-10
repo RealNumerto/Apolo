@@ -61,6 +61,14 @@ $useChannel[782754905932562446]
 })
 bot.onJoined()
 
+////////BOT PING//////
+bot.Command({
+  name: "ping",
+  code: `
+  :white_check_mark: - Bot Ping : **$pingms** !
+  `
+})
+
 ///////EKONOMIJA///////
 bot.Command({
   name: "novcanik",
@@ -172,7 +180,7 @@ bot.ExecutableCommand({
 $footer[Apolo Community™ - strana 1/2 (da vidis drugu stranu kucaj > !!help clanovi 2 <);https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
 $description[<a:point:781135170052292609> ** !!play** - Pustajte muziku u Voice Kanalu.
-<a:point:781135170052292609> ** !!search** - Slicno kao \`!!play\` samo sto ovde kada kucate koju muziku hocete bot vam ponudi vise opcija dok u \`!!play\` bot pusti brvu muziku koju vidi.
+<a:point:781135170052292609> ** !!search** - Slicno kao \`!!play\` samo sto ovde kada kucate koju muziku hocete bot vam ponudi vise opcija dok sa \`!!play\` bot pusti brvu muziku koju vidi.
 <a:point:781135170052292609> ** !!pause** - Da pauzirate trenutnu muziku.
 <a:point:781135170052292609> ** !!resume** - Da pokrenete pauziranu muziku.
 <a:point:781135170052292609> ** !!queue** - Da vidite pesme/muzike koje su u playlisti.
@@ -182,7 +190,7 @@ $description[<a:point:781135170052292609> ** !!play** - Pustajte muziku u Voice 
 <a:point:781135170052292609> ** !!loop** - Da bi omogucili ili onemogucili ponavljanje muzike.
 <a:point:781135170052292609> ** !!volume** - Da postavite jacinu muzike.
 <a:point:781135170052292609> ** !!skip** - Da predjete na sledecu musizku.
-<a:point:781135170052292609> ** !!stop** - Da stopirate svu muziku.
+<a:point:781135170052292609> ** !!stop** - Da stopirate svu muziku.]
   `
 })
 
