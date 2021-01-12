@@ -738,7 +738,7 @@ $description[:no_entry_sign: Ispod navedene posledice kršenja pravila koji su n
 })
 
 bot.Command({
-name: "create",
+name: "lockdown",
 code: `
 $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;+sendmessages;$mentioned[1]]
 `
