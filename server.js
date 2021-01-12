@@ -736,3 +736,10 @@ $description[:no_entry_sign: Ispod navedene posledice kršenja pravila koji su n
 :radioactive:Vrlo jednostavno i logično ne kršite navedena pravila gore i sve će biti okej :).]
   `
 })
+
+bot.Command({
+name: "create",
+code: `
+$modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;+sendmessages;$mentioned[1]]
+`
+})
