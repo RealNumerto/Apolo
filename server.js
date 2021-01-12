@@ -406,7 +406,7 @@ bot.Command({
 bot.Command({
   name: "ban",
   code: `
-$channelSendMessage[$channelID[];<@$findUser[$message[1]]> je banovan.
+$channelSendMessage[$channelID[];<@$findUser[$message[1]]> je banovan/a.
 Razlog: **$messageSlice[>1]**]
 $ban[$findUser[$message[1]];$messageSlice[>1]]
 $onlyIf[$findUser[$message[1]]!=$ownerID;{title:Ban Error}{description:Dobar pokusaj. Ne mozes da banujes server vlasnika.}]
@@ -420,7 +420,7 @@ $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nem
 bot.Command({
   name: "ban",
   code: `
-$channelSendMessage[794551111038009404;{title:User Banovan}{description:<@$findUser[$message[1]]> je banovan.
+$channelSendMessage[794551111038009404;{title:User Banovan}{description:<@$findUser[$message[1]]> je banovan/a.
 Razlog: **$messageSlice[>1]**}{footer:Banovan/a od strane $username[$authorID]#$discriminator[$authorID]}]
 $onlyIf[$findUser[$message[1]]!=$ownerID;]
 $onlyIf[$findUser[$message[1]]!=$client[id];]
@@ -433,7 +433,7 @@ $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;]
 bot.Command({
   name: "unban",
   code: `
-  $channelSendMessage[$channelID[];**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan.
+  $channelSendMessage[$channelID[];**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan/a.
 Razlog: **$messageSlice[>1]**]
 $unban[$message[1];$messageSlice[>1]]
 $argsCheck[>1;Pogresno napisana komanda. Probaj: **!!unban (USER ID) (razlog)**. () ne trebas da koristis]
@@ -444,7 +444,7 @@ $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nem
 bot.Command({
   name: "unban",
   code: `
-  $channelSendMessage[794551111038009404;{title:User Unbanovan}{description:**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan
+  $channelSendMessage[794551111038009404;{title:User Unbanovan}{description:**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan/a.
 Razlog: **$messageSlice[>1]**}{footer:Unbanovan/a od strane $username[$authorID]#$discriminator[$authorID]}]
 $argsCheck[>1;]
 $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;]
