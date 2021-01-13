@@ -297,7 +297,6 @@ bot.SpaceCommand({
   name: "randomemoji",
   code: `
   $setUserVar[req;$multi[$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];2]]
-  Cestitam <@$replaceText[$findUser[$message[]];undefined;$authorID]>!!! Level up si se do levela: **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
   $setUserVar[rank;$sum[$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]];1]]
   $onlyIf[$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]>=$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];]
   $setUserVar[msg;$sum[$getUserVar[msg];1]]
