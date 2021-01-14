@@ -667,6 +667,7 @@ bot.Command({
   name: "serverinfo",
   code: `$title[$serverName[]]
   $description[$addField[Server Verification Level;$serverVerificationLvl[]]
+  $addField[Members Count;**$membersCount[human]**]
   $addField[Boost Level;$serverBoostLevel[]]
   $addField[Boost Count;$serverBoostCount[]]
   $addField[Region;$region]
