@@ -113,7 +113,7 @@ Za <a:ping_rage:$findEmote[ping_rage]> kucaj **-emoji ping_rage**
 Za <a:banned:$findEmote[banned]> kucaj **-emoji banned**
 Za <a:partner:$findEmote[partner]> kucaj **-emoji partner**
 Za <a:nitro:$findEmote[nitro]> kucaj **-emoji nitro**]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 $onlyIf[$message[2]!=2;{execute:2}]
 `
 })
@@ -122,7 +122,7 @@ bot.ExecutableCommand({
   name: "2",
   code: `
   hello
-  $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+  $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
   `
 })
 
@@ -131,7 +131,7 @@ bot.Command({
   name: "role",
   code: `
 $findRole[$message[1]]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -140,7 +140,7 @@ bot.Command({
   name: "say",
   code: `
 $channelSendMessage[$mentionedChannels[1];$replaceText[$message[];<#$mentionedChannels[1]>;]]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -150,7 +150,7 @@ bot.Command({
   code: `
 <a:$message[]:$findEmote[$message[]]>
 $deletecommand[]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 $onlyIf[$message[1]!=list;{execute:list}]
 $onlyIf[$message[1]!=;Napisi ime nekog emojia. Lista emojia \`-emoji list\`]
 `
@@ -234,7 +234,7 @@ $description[<a:point:781135170052292609> ** !!obrisi** - Ova komanda je za bris
 <a:point:781135170052292609> ** !!unmute** - da unmutiras nekoga
 <a:point:781135170052292609> ** !!ban** - da banujes nekoga
 <a:point:781135170052292609> ** !!unban** - da unbanujes nekoga]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -309,7 +309,7 @@ bot.Command({
   name: "emote",
   code: `
 $findEmote[$message[]]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -322,7 +322,7 @@ bot.Command({
   $description[Obrisano **$message[1]** poruka]
   $clear[$message[]]
   $onlyIf[$message[1]!=;Pogresno napisana komanda. Probaj: ** !!obrisi (neki broj)**. () ne trebas da koristis]
-  $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+  $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
   `
 })
 
@@ -356,7 +356,7 @@ Razlog: **$messageSlice[>2]**]
 $giveRole[$mentioned[1];$roleID[Muted]]
 $setUserVar[autounmute;yes;$mentioned[1]]
 $argsCheck[>2;Pogresno napisana komanda. Probaj: **!!mute (@username) (na koliko mute) (razlog)**. () ne trebas da koristis]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;782780772196024351;782777593639862273;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;782780772196024351;782777593639862273;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -372,7 +372,7 @@ Razlog: **$messageSlice[>1]**]
   $onlyIf[$getUserVar[autounmute;$mentioned[1]]==yes;$username[$mentioned[1]]#$discriminator[$mentioned[1]] nije mutiran/a]
   $onlyIf[$hasRole[$mentioned[1];$roleID[Muted]]!=;Ova osoba nije mutirana]
   $argsCheck[>1;Pogresno napisana komanda. Probaj: **!!unmute (@user) (razlog)**. () ne trebas da koristis]
-  $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;782780772196024351;782777593639862273;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+  $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;782780772196024351;782777593639862273;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
   `
 })
 
@@ -412,7 +412,7 @@ $onlyIf[$findUser[$message[1]]!=$ownerID;{title:Ban Error}{description:Dobar pok
 $onlyIf[$findUser[$message[1]]!=$client[id];{title:Ban Error}{description:Banaj me ako mozes xD. Ne mogu ja da banam sam sebe.}]
 $onlyIf[$findUser[$message[1]]!=$authorID;{title:Ban Error}{description:Ne mozes da banujes sebe. LoL}]
 $argsCheck[>1;Pogresno napisana komanda. Probaj: **!!ban (@username) (razlog)**. () ne trebas da koristis]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -425,7 +425,7 @@ $onlyIf[$findUser[$message[1]]!=$ownerID;]
 $onlyIf[$findUser[$message[1]]!=$client[id];]
 $onlyIf[$findUser[$message[1]]!=$authorID;]
 $argsCheck[>1;]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;]
 `
 })
 
@@ -436,7 +436,7 @@ bot.Command({
 Razlog: **$messageSlice[>1]**]
 $unban[$message[1];$messageSlice[>1]]
 $argsCheck[>1;Pogresno napisana komanda. Probaj: **!!unban (USER ID) (razlog)**. () ne trebas da koristis]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -446,7 +446,7 @@ bot.Command({
   $channelSendMessage[794551111038009404;{title:User Unbanovan}{description:**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan/a.
 Razlog: **$messageSlice[>1]**}{footer:Unbanovan/a od strane $username[$authorID]#$discriminator[$authorID]}]
 $argsCheck[>1;]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;]
 `
 })
 
@@ -460,7 +460,7 @@ $description[Nick od <@$mentioned[1]> je promenjen u **$messageSlice[>1]**]
 $setNickname[$mentioned[1];$messageSlice[>1]]
 $onlyIf[$message[2]!=;**Ukucaj neki nick da bi promenuo!!!**]
 $onlyIf[$userExists[$mentioned[1]]==true;Pogresno napisana komanda. Probaj: **!!nick (@user) (nick)**. () ne trebas da koristis]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -490,7 +490,7 @@ bot.Command({
 name: "leaderboard",
 code: `
 $userLeaderboard[msg;asc]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
@@ -521,7 +521,7 @@ bot.Command({
   $resetUserVar[req]
   $resetUserVar[lvl]
   $resetUserVar[msg]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
   `
 })
 
