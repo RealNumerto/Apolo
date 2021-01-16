@@ -386,6 +386,7 @@ bot.Command({
   $color[$random[0;999999]]
   $description[]
   $image[$replaceText[$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]];.webp?size=128;.png?size=4096]]
+  $onlyIf[$channelID[]!=782754905932562446;<@$authorID> Ovu komandu ne mozes koristiti ovde. Jedino u <#783846707866894386>]
   `
 })
 
@@ -398,6 +399,7 @@ bot.Command({
   $color[$random[0;999999]]
   $description[]
   $image[$replaceText[$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]];.webp?size=128;.png?size=4096]]
+  $onlyIf[$channelID[]!=782754905932562446;<@$authorID> Ovu komandu ne mozes koristiti ovde. Jedino u <#783846707866894386>]
   `
 })
 
@@ -657,9 +659,10 @@ bot.Command({
   })
 
 bot.Command({
-  name: "@lol",
+  name: "lol",
   code: `
   aloo
+ $onlyIf[$channelID[]!=794585038812479539;Ne moze] 
   `
 })
 
