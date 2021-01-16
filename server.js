@@ -289,7 +289,7 @@ bot.SpaceCommand({
 name: "mentionhelp",
 code: `
 Pozdrav <@$authorID> Moj prefix je \`!!\`, a da vidis sve komande kucaj \`!!help\`
-$onlyIfMessageContains[<@!$client[id]>;<@!$client[id]>;]
+$onlyIfMessageContains[<@!$client[id]>;<@$client[id]>;]
 `
 })
 
