@@ -386,7 +386,6 @@ bot.Command({
   $color[$random[0;999999]]
   $description[]
   $image[$replaceText[$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]];.webp?size=128;.png?size=4096]]
-  $onlyIf[$channelID[]!=782754905932562446;<@$authorID> Ovu komandu ne mozes koristiti ovde. Jedino u <#783846707866894386>]
   `
 })
 
@@ -399,9 +398,9 @@ bot.Command({
   $color[$random[0;999999]]
   $description[]
   $image[$replaceText[$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]];.webp?size=128;.png?size=4096]]
-  $onlyIf[$channelID[]!=782754905932562446;<@$authorID> Ovu komandu ne mozes koristiti ovde. Jedino u <#783846707866894386>]
   `
 })
+//////$onlyIf[$channelID[]!=782754905932562446;<@$authorID> Ovu komandu ne mozes koristiti ovde. Jedino u <#783846707866894386>] (kod za blocked kanal)//////
 
 ////////BAN I UNBAN KOMANDA (LOGOVI SU POSLE SVAKE KOMANDE)///////
 bot.Command({
