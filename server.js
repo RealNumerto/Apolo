@@ -25,14 +25,10 @@ bot.Variables({
 ////////BOT STATUS///////
 bot.Status({
         0: {
-            description: "Apolo Community™", 
-            type: "PLAYING" 
-        }, 
-        1: {
-            description: "kucaj !!help za sve komande", 
+            description: "Apolo Community™ | !!help", 
             type: "PLAYING" 
         },
-        2: {
+        1: {
             description:"$numberSeparator[$allMembersCount;,] clanova",
             type: "WATCHING"
         }
