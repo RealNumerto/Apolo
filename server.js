@@ -365,9 +365,9 @@ bot.Command({
 Razlog: **$messageSlice[>1]**]
   $takeRole[$mentioned[1];$roleID[Muted]]
   $setUserVar[autounmute;no;$mentioned[1]]
-  $onlyIf[$getUserVar[autounmute;$mentioned[1]]==yes;$username[$mentioned[1]]#$discriminator[$mentioned[1]] nije mutiran/a]
-  $onlyIf[$hasRole[$mentioned[1];$roleID[Muted]]!=;Ova osoba nije mutirana]
-  $argsCheck[>1;Pogresno napisana komanda. Probaj: **!!unmute (@user) (razlog)**. () ne trebas da koristis]
+  $onlyIf[$getUserVar[autounmute;$mentioned[1]]==yes;**$username[$mentioned[1]]#$discriminator[$mentioned[1]]** nije mutiran/a]
+  $onlyIf[$hasRole[$replaceText[$findUser[$message[]];undefined;$authorID];$roleID[Muted]]!=;Ova osoba nije mutirana]
+  $argsCheck[>2;Pogresno napisana komanda. Probaj: **!!unmute (@user) (razlog)**. () ne trebas da koristis]
   $onlyForRoles[802193550250999808;782778612361330768;801810495354306591;782775328116047892;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
   `
 })
@@ -408,7 +408,7 @@ $ban[$findUser[$message[1]];$messageSlice[>1]]
 $onlyIf[$findUser[$message[1]]!=$ownerID;{title:Ban Error}{description:Dobar pokusaj. Ne mozes da banujes server vlasnika.}]
 $onlyIf[$findUser[$message[1]]!=$client[id];{title:Ban Error}{description:Banaj me ako mozes xD. Ne mogu ja da banam sam sebe.}]
 $onlyIf[$findUser[$message[1]]!=$authorID;{title:Ban Error}{description:Ne mozes da banujes sebe. LoL}]
-$argsCheck[>1;Pogresno napisana komanda. Probaj: **!!ban (@username) (razlog)**. () ne trebas da koristis]
+$argsCheck[>2;Pogresno napisana komanda. Probaj: **!!ban (@username) (razlog)**. () ne trebas da koristis]
 $onlyForRoles[782775328116047892;801810495354306591;782778612361330768;802194924539871254;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
@@ -421,7 +421,7 @@ Razlog: **$messageSlice[>1]**}{footer:Banovan/a od strane $username[$authorID]#$
 $onlyIf[$findUser[$message[1]]!=$ownerID;]
 $onlyIf[$findUser[$message[1]]!=$client[id];]
 $onlyIf[$findUser[$message[1]]!=$authorID;]
-$argsCheck[>1;]
+$argsCheck[>2;]
 $onlyForRoles[782775328116047892;801810495354306591;782778612361330768;802194924539871254;]
 `
 })
@@ -432,7 +432,7 @@ bot.Command({
   $channelSendMessage[$channelID[];**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan/a.
 Razlog: **$messageSlice[>1]**]
 $unban[$message[1];$messageSlice[>1]]
-$argsCheck[>1;Pogresno napisana komanda. Probaj: **!!unban (USER ID) (razlog)**. () ne trebas da koristis]
+$argsCheck[>2;Pogresno napisana komanda. Probaj: **!!unban (USER ID) (razlog)**. () ne trebas da koristis]
 $onlyForRoles[782775328116047892;801810495354306591;782778612361330768;802194924539871254;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
@@ -442,7 +442,7 @@ bot.Command({
   code: `
   $channelSendMessage[794551111038009404;{title:User Unbanovan}{description:**$username[$findUser[$message[1]]]#$discriminator[$findUser[$message[1]]]** je unbanovan/a.
 Razlog: **$messageSlice[>1]**}{footer:Unbanovan/a od strane $username[$authorID]#$discriminator[$authorID]}]
-$argsCheck[>1;]
+$argsCheck[>2;]
 $onlyForRoles[782775328116047892;801810495354306591;782778612361330768;802194924539871254;]
 `
 })
