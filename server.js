@@ -736,6 +736,16 @@ $description[:no_entry_sign: Ispod navedene posledice kršenja pravila koji su n
 })
 
 bot.Command({
+  name: "info",
+  code: `
+  $title[Donacije]
+  $description[Ako neko hoće da podrži server novčano, ispod vam je paypal link na kome možete poslati koji evro. Hvala. <a:srce:800552497902256148> 
+**Ako donirate dobićete <@&802918623738855445> role, a na kraju meseca osoba koja je donirala najviše dobija <@&802919136426197023> role. Oba rola imaju jako lepe privilegije.** <a:srce:800552497902256148> 
+<a:desno:800552273955782666> https://paypal.me/djogo023 <a:levo:802530795881234462>]
+  `
+})
+
+bot.Command({
 name: "@lockdown",
 code: `
 $modifyChannelPerms[$mentionedChannels[1;yes];-sendmessages;$mentioned[1]]
