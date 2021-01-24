@@ -736,9 +736,10 @@ $description[:no_entry_sign: Ispod navedene posledice kršenja pravila koji su n
 })
 
 bot.Command({
-  name: "info",
+  name: "dono",
   code: `
-  $title[Donacije]
+  $author[Donacije;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Ko donira treba da se javi Numerto#2542 sa dokazom donacije. Hvala.;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
   $description[Ako neko hoće da podrži server novčano, ispod vam je paypal link na kome možete poslati koji evro. Hvala. <a:srce:800552497902256148> 
 **Ako donirate dobićete <@&802918623738855445> role, a na kraju meseca osoba koja je donirala najviše dobija <@&802919136426197023> role. Oba rola imaju jako lepe privilegije.** <a:srce:800552497902256148> 
 <a:desno:800552273955782666> https://paypal.me/djogo023 <a:levo:802530795881234462>]
