@@ -248,11 +248,12 @@ $argsCheck[>1;Napisi neko pitanje koje ti padne na pamet]
 `
 })
 
+///$userAvatar[$replaceText[$replaceText[$checkCondition[$findUser[$message[]]==undefined];true;$authorID];false;$findUser[$message[]]];png;true;512]//////$userAvatar[$authorID]///
 bot.Command({
    name: "procenat",
    code: `
 $title[$username[]#$discriminator[$authorID] je postavio/la pitanje]
-$footer[Pitanje postavio/la $username[]#$discriminator[$authorID];$userAvatar[$authorID]]
+$footer[Pitanje postavio/la $username[]#$discriminator[$authorID];$userAvatar[$replaceText[$replaceText[$checkCondition[$findUser[$message[]]==undefined];true;$authorID];false;$findUser[$message[]]];png;true;512]]
 $color[772773]
 $description[]
 $addField[Odgovor bota:;$random[0;100]%;no]
@@ -390,7 +391,7 @@ bot.Command({
   name: "av",
   aliases: ["avatar", "av"],
   code: `
-  $author[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$userAvatar[$replaceText[$replaceText[$checkCondition[$findUser[$message[]]==undefined];true;$authorID];false;$findUser[$message[]]];png;true;512]]]
+  $author[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]];$userAvatar[$replaceText[$replaceText[$checkCondition[$findUser[$message[]]==undefined];true;$authorID];false;$findUser[$message[]]];png;true;512]]
   $title[Avatar]
   $color[$random[0;999999]]
   $description[]
