@@ -351,7 +351,8 @@ $channelSendMessage[$channelID[];<@$mentioned[1]> je mutiran na **$message[2]**.
 Razlog: **$messageSlice[>2]**]
 $giveRole[$mentioned[1];$roleID[Muted]]
 $setUserVar[autounmute;yes;$mentioned[1]]
-$argsCheck[>2;Pogresno napisana komanda. Probaj: **!!mute (@username) (na koliko mute) (razlog)**. () ne trebas da koristis]
+$argsCheck[>2;Pogresno napisana komanda. Probaj: **!!mute (@username) (na koliko mute(vreme)) (razlog)**. () ne trebas da koristis]
+$onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];h;];m;];s;];d;]]==true;Pogresno napisana komanda. Probaj: **!!mute (@username) (na koliko mute(vreme)) (razlog)**. () ne trebas da koristis]
 $onlyForRoles[802193550250999808;782778612361330768;801810495354306591;782775328116047892;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
@@ -372,12 +373,12 @@ Razlog: **$messageSlice[>1]**]
   `
 })
 
-//////AVATAR KOMANDA//////
+//////AVATAR KOMANDA//////$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]]///////
 bot.Command({
   name: "avatar",
   aliases: ["avatar", "av"],
   code: `
-  $author[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]];$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]]]
+  $author[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]];$userAvatar[$replaceText[$replaceText[$checkCondition[$findUser[$message[]]==undefined];true;$authorID];false;$findUser[$message[]]];png;true;512]]
   $title[Avatar]
   $color[$random[0;999999]]
   $description[]
@@ -389,7 +390,7 @@ bot.Command({
   name: "av",
   aliases: ["avatar", "av"],
   code: `
-  $author[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]];$userAvatar[$replaceText[$findUser[$message[]];undefined;$authorID]]]
+  $author[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$userAvatar[$replaceText[$replaceText[$checkCondition[$findUser[$message[]]==undefined];true;$authorID];false;$findUser[$message[]]];png;true;512]]]
   $title[Avatar]
   $color[$random[0;999999]]
   $description[]
