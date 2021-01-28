@@ -1,5 +1,5 @@
 module.exports = ({
-name: "obrisi"
+name: "obrisi",
 code: `
   $title[Poruke Obrisane!!!]
   $color[$random[0;999999]]
