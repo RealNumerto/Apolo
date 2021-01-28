@@ -69,7 +69,7 @@ bot.onJoined()
 
 ////////BOT PING//////
 bot.Command({
-  name: "@ping",
+  name: "ping",
   code: `
   :white_check_mark: - Bot Ping : **$pingms** !
   `
@@ -77,7 +77,7 @@ bot.Command({
 
 //////KOMANDA SA KOJOM DOBIJAM ROLE ID///////
 bot.Command({
-  name: "@role",
+  name: "role",
   code: `
 $findRole[$message[1]]
 $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
@@ -95,7 +95,7 @@ $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045
 
 //////BOT DA POSALJE ANIMATED EMOJI//////
 bot.Command({
-  name: "@emoji",
+  name: "emoji",
   code: `
 <a:$message[]:$findEmote[$message[]]>
 $deletecommand[]
@@ -255,7 +255,7 @@ bot.SpaceCommand({
 
 /////KOMANDA DA DOBIJEM EMOJI ID/////////
 bot.Command({  
-  name: "@emote",
+  name: "emote",
   code: `
 $findEmote[$message[]]
 $onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
@@ -465,7 +465,7 @@ bot.Command({
 })
 
 bot.Command({
-  name: "@reset",
+  name: "resetvar023",
   code: `
   Leveling System resetovan.....
   $resetUserVar[rank]
