@@ -7,6 +7,21 @@ const bot = new discordScript({
   prefix: ["!!"]
 });
 
+const fs = require('fs');
+const { notDeepStrictEqual } = require("assert");
+const { time } = require("console");
+const folders = fs.readdirSync("./commands/")
+
+for (const files of folders) {
+    const folder = fs.readdirSync(`./commands/${files}/`).filter(file => file.endsWith(".js"))
+
+    for (const commands of folder) {
+        const command = require(`./commands/${files}/${commands}`)
+        bot.Command(command);
+        console.log(`Loaded: ${command.name} | ${folders} folder - [${command.aliases}]`);
+    }
+}
+
 ///////////OVO SU VARIABLES I TU PISEM VAR KAO U DBD/////////
 bot.Variables({
   prefix: "*",
@@ -154,7 +169,7 @@ $onlyIf[$message[1]!=;Napisi ime nekog emojia. Lista emojia \`-emoji list\`]
 
 ////////HELP KOMANDE//////
 bot.Command({
-  name: "help",
+  name: "@help",
   code: `
 $title[Pomoc]
 $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
@@ -164,12 +179,12 @@ $addField[Komande za membere;<a:point:781135170052292609> **!!help clanovi** (Ov
 $addField[Komande za staff;<a:point:781135170052292609> **!!help staff** (Ako si deo staffa moci ces da koristis ovu komandu)]]
 $onlyIf[$message[1]!=clanovi;{execute:clanovi}]
 $onlyIf[$message[1]!=staff;{execute:staff}]
-$onlyIf[$message[1]!=music;{execute:music}]
+$onlyIf[$message[1]!=nema;{execute:nema}]
 `
 })
 
 bot.ExecutableCommand({
-  name: "@music",
+  name: "nema",
   code: `
   $title[Music Pomoc]
 $footer[Apolo Community™ Music;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
