@@ -12,6 +12,7 @@ $giveRole[$mentioned[1];$roleID[Muted]]
 $setUserVar[autounmute;yes;$mentioned[1]]
 $argsCheck[>2;Pogresno napisana komanda. Probaj: **!!mute (@username) (na koliko mute(vreme)) (razlog)**. () ne trebas da koristis]
 $onlyIf[$isNumber[$replaceText[$replaceText[$replaceText[$replaceText[$message[2];h;];m;];s;];d;]]==true;Pogresno napisana komanda. Probaj: **!!mute (@username) (na koliko mute(vreme)) (razlog)**. () ne trebas da koristis]
-$onlyForRoles[802193550250999808;782778612361330768;801810495354306591;782775328116047892;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyBotPerms[managemessages;{title:Perms Greška}{description::x:Bot Nema \`Manage Permissions\` Permisiju}{color:#17A589}]
+$onlyPerms[managemessages;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{color:#17A589}]
 `
 })
