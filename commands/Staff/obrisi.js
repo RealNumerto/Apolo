@@ -1,11 +1,14 @@
 module.exports = ({
-name: "obrisi",
-code: `
-  $title[Poruke Obrisane!!!]
-  $color[$random[0;999999]]
-  $description[Obrisano **$message[1]** poruka]
-  $clear[$message[]]
-  $onlyIf[$message[1]!=;Pogresno napisana komanda. Probaj: ** !!obrisi (neki broj)**. () ne trebas da koristis]
-  $onlyForRoles[794558765961314314;782778612361330768;801810495354306591;782775328116047892;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
-  `
-  })
+ name:"obrisi",
+ aliases:["obrisati"],
+ code:`
+ $clear[$message[]]
+ $title[Brisanje Poruka Uspešno]
+ $description[Uspešno Obrisano **$message[]** Poruka U <#$channelID[]>]
+ $color[#17A589]
+ $onlyIf[$isNumber[$message[]]==true;{title:Greška}{description:To Nije Validan Broj!}{color:#17A589}]
+ $onlyIf[$message[]!=;{title:Greška}{description:Nisi Napisao/la Koliko Poruka Oćeš Da Obrišeš}{color:#17A589}]
+ $onlyBotPerms[managemessages;{title:Perms Greška}{description::x:Bot Nema \`Manage Permissions\` Permisiju}{color:#17A589}]
+ $onlyPerms[managemessages;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{color:#17A589}]
+ `
+})
