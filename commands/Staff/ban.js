@@ -18,8 +18,8 @@ module.exports = ({
  $onlyIf[$findUser[$message[1]]!=$client[id];Ako uspeš banuj me, ne mogu banati sam sebe.]
 
  $onlyIf[$findUser[$message[1]]!=$authorID;Ne možeš banati samog sebe]
- $onlyIf[$userExists[$findUser[$message[1]]]==true;*$message[1]* ta osoba ne postoji. Pokušaj opet.\n\`!!ban <userID/mention> (razlog)\` - Razlog je obavezan!]
- $onlyIf[$findUser[$message[1]]!=undefined;*$message[1]* ta osoba ne postoji. Pokušaj opet.\n\`!!ban <userID/mention> (razlog)\` - Razlog je obavezan!]
+ $onlyIf[$userExists[$findUser[$message[1]]]==true;*$message[1]* ta osoba ne postoji ili nije na serveru. Pokušaj opet.\n\`!!ban <userID/mention> (razlog)\` - Razlog je obavezan!]
+ $onlyIf[$findUser[$message[1]]!=undefined;*$message[1]* ta osoba ne postoji ili nije na serveru. Pokušaj opet.\n\`!!ban <userID/mention> (razlog)\` - Razlog je obavezan!]
  $onlyIf[$message[]!=;Koga trebam da banujem?\n\`!!ban <userID/mention> (razlog)\` - Razlog je obavezan!]
  $onlyBotPerms[ban;{title:Perms Greška}{description::x:Bot Nema \`Ban Members\` Permisiju}{color:#17A589}]
  $onlyPerms[ban;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{color:#17A589}]
