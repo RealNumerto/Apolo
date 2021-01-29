@@ -10,6 +10,7 @@ Razlog: **$messageSlice[>1]**]
   $onlyIf[$getUserVar[autounmute;$mentioned[1]]==yes;**$username[$mentioned[1]]#$discriminator[$mentioned[1]]** nije mutiran/a]
   $onlyIf[$hasRole[$replaceText[$findUser[$message[]];undefined;$authorID];$roleID[Muted]]!=;Ova osoba nije mutirana]
   $argsCheck[>2;Pogresno napisana komanda. Probaj: **!!unmute (@user) (razlog)**. () ne trebas da koristis]
-  $onlyForRoles[802193550250999808;782778612361330768;801810495354306591;782775328116047892;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+  $onlyBotPerms[managemessages;{title:Perms Greška}{description::x:Bot Nema \`Manage Permissions\` Permisiju}{color:#17A589}]
+  $onlyPerms[managemessages;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{color:#17A589}]
   `
 })
