@@ -3,7 +3,7 @@ const Dlang = require('discordbot-script')
 const discordScript = require("discordbot-script")
 
 const bot = new discordScript({
-  token: "token",
+  token: process.env.TOKEN,
   prefix: ["!!"]
 });
 
