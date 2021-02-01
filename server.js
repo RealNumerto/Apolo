@@ -177,11 +177,11 @@ bot.ExecutableCommand({
 $title[Staff Pomoc]
 $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
-$description[<a:point:781135170052292609> ** !!obrisi** - Ova komanda je za brisanje poruka
-<a:point:781135170052292609> ** !!mute** - da mutiras nekoga na neko vreme
-<a:point:781135170052292609> ** !!unmute** - da unmutiras nekoga
-<a:point:781135170052292609> ** !!ban** - da banujes nekoga
-<a:point:781135170052292609> ** !!unban** - da unbanujes nekoga]
+$description[<a:point:781135170052292609> ** !!obrisi ili !!obrisati** - Ova komanda je za brisanje poruka.
+<a:point:781135170052292609> ** !!mute** - da mutirtas nekoga na neko vreme.
+<a:point:781135170052292609> ** !!unmute** - da unmutiras nekoga.
+<a:point:781135170052292609> ** !!ban** - da banujes nekoga.
+<a:point:781135170052292609> ** !!unban** - da unbanujes nekoga.]
 $onlyForRoles[802193550250999808;782778612361330768;801810495354306591;782775328116047892;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
