@@ -1,5 +1,5 @@
 module.exports = ({
-  name: "profil",
+  name: "@profil",
   code: `
   $title[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]] profil!!!]
   $color[$random[0;999999]]
