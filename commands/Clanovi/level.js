@@ -1,7 +1,8 @@
 module.exports = ({
-  name: "level",
+  name: "@level",
   code: `
   $title[$username[$replaceText[$findUser[$message[]];undefined;$authorID]]#$discriminator[$replaceText[$findUser[$message[]];undefined;$authorID]] Level]
+  $footer[Brojanje je pocelo od 8.2.2021;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
   $color[$random[0;999999]]
   $description[
   <@$replaceText[$findUser[$message[]];undefined;$authorID]> level je **$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]]**
