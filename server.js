@@ -48,7 +48,7 @@ bot.MessageEvent()
 bot.MessageEditEvent()
 
 bot.JoinedCommand({
-name: "782754905932562446",
+name: "805225522636390410",
 code: `
 $author[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $description[
@@ -57,12 +57,12 @@ $description[
 <@$authorID>
 🙋 **|** Dobrodošao/la na __**Apolo Community™**__
 ‼️ **|** Pre nego što počnes da se dopisuješ pročitaj:
-<#782771992733810698>
+<#805212375133061160>
 🔢 **|** **$membersCount[human].** članova na serveru
 ☑️ **|** Zabavi se na serveru i uživaj]
 $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
-$image[https://media.discordapp.net/attachments/794585038812479539/796688512955056158/Apolo_gif_banner.gif]
-$useChannel[782754905932562446]
+$thumbnail[$userAvatar[$author;png;true;512]]
+$useChannel[805225522636390410]
 `
 })
 bot.onJoined()
@@ -72,6 +72,81 @@ bot.Command({
   name: "ping",
   code: `
   :white_check_mark: - Bot Ping : **$pingms** !
+   
+  Uptime: $replaceText[$replaceText[$replaceText[$uptime;d;d ];h;h ];m;m ]
+  `
+})
+
+bot.Command({
+  name: "@@changeprefix",
+  code: `
+  **The prefix has been changed to \`$message[1]\` sucessfully!**
+    $setServerVar[prefix;$message[1]]
+$argsCheck[1;**You must provide at least \`1\` argument**]
+$onlyPerms[manageserver; **You need the \`{perms}\` permission to use this command.**]
+`
+})
+
+bot.Command({
+  name: "@@prefix",
+  code: `
+  Your Prefix is **$getServerVar[prefix]**
+  `
+})
+
+bot.Command({
+  name: "@@resetprefix",
+  code: `
+  Sucess
+  $resetServerVar[prefix]
+  $onlyPerms[manageserver; **You need the \`{perms}\` permission to use this command.**]
+  `
+})
+
+bot.Command({
+  name: "@top",
+  code: `
+  $author[Top Liste;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Apolo Community™ | Brojanje je pocelo od 8.9.2021;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $color[00ff00]
+  $description[$addField[Top Liste;\`poruke\` **|** \`level\` **|** \`poeni\`]
+  $addField[Komanda;Da vidis top liste sledeca je komanda: \`!!top <lista>\`]]
+  $onlyIf[$message[1]!=poeni;{execute:poeni}]
+  $onlyIf[$message[1]!=level;{execute:level}]
+  $onlyIf[$message[1]!=poruke;{execute:poruke}]
+  `
+})
+
+bot.ExecutableCommand({
+  name: "poruke",
+  code: `
+  $author[Top Poruke;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $addTimestamp
+  $color[00ff00]
+  $description[$replaceText[$userLeaderboard[msg;asc;\`{top}.\` **{tag}** • \`{value}\` poruka];";]]
+  `
+})
+
+bot.ExecutableCommand({
+  name: "level",
+  code: `
+  $author[Top Level;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $addTimestamp
+  $color[00ff00]
+  $description[$replaceText[$userLeaderboard[rank;asc;\`{top}.\` **{tag}** • \`{value}\` level];";]]
+  `
+})
+
+bot.ExecutableCommand({
+  name: "poeni",
+  code: `
+  $author[Top Poeni;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $addTimestamp
+  $color[00ff00]
+  $description[$replaceText[$userLeaderboard[lvl;asc;\`{top}.\` **{tag}** • \`{value}\` poena];";]]
   `
 })
 
@@ -80,7 +155,7 @@ bot.Command({
   name: "role",
   code: `
 $findRole[$message[1]]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyPerms[administrator;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{footer:Apolo Community™}{color:ff0000}]
 `
 })
 
@@ -89,7 +164,7 @@ bot.Command({
   name: "say",
   code: `
 $channelSendMessage[$mentionedChannels[1];$replaceText[$message[];<#$mentionedChannels[1]>;]]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+$onlyPerms[administrator;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{footer:Apolo Community™}{color:ff0000}]
 `
 })
 
@@ -99,10 +174,79 @@ bot.Command({
   code: `
 <a:$message[]:$findEmote[$message[]]>
 $deletecommand[]
-$onlyForRoles[782775328116047892;782778612361330768;794558765961314314;799034045220651029;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
-$onlyIf[$message[1]!=list;{execute:list}]
-$onlyIf[$message[1]!=;Napisi ime nekog emojia. Lista emojia \`-emoji list\`]
+$onlyPerms[administrator;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{footer:Apolo Community™}{color:ff0000}]
 `
+})
+
+/////KOMANDA DA DOBIJEM EMOJI ID/////////
+bot.Command({  
+  name: "emote",
+  code: `
+$findEmote[$message[]]
+$onlyPerms[administrator;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{footer:Apolo Community™}{color:ff0000}]
+`
+})
+
+////////PREDLOG KOMANDA///////
+bot.Command({
+  name: "predlog",
+  code: `
+$useChannel[785258143882018836]
+$author[PAZNJA!!!]
+$title[Vreme je za glasanje!!!]
+$color[$random[0;999999]]
+$description[]
+$addField[Dostupni odgovori;Ne <a:up:781134690060075008> **|** Da <a:down:781134657919778816>;true]
+$addField[Kako glasati?;Kliknite nesto od ponudjenih reakcija dole;no]
+$addField[Glasanje;Jedno glasanje po memberu. Ako hocete da promenite svoje misljenje onda kliknite reakciju koju ste prethodno stisnuli pa onda novu. Hvala :heart:;no]
+$footer[Kada procitate sve onda glasajte!:https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$addField[Tema:;**$message[]**;no]
+$addReactions[781134690060075008;781134657919778816]
+$argsCheck[>1;**nisi tacno napisao komandu - Probaj ovako: !!predlog {napisi sta hoces za glasanje}**]
+`
+})
+
+/////KOMANDA ZA MENJANJE NICK-A/////
+bot.Command({
+name: "nick",
+code: `
+$title[Nick promenjen]
+$color[$random[0;999999]]
+$description[Nick od <@$mentioned[1]> je promenjen u **$messageSlice[>1]**]
+$setNickname[$mentioned[1];$messageSlice[>1]]
+$onlyIf[$message[2]!=;**Ukucaj neki nick da bi promenuo!!!**]
+$onlyIf[$userExists[$mentioned[1]]==true;Pogresno napisana komanda. Probaj: **!!nick (@user) (nick)**. () ne trebas da koristis]
+$onlyPerms[administrator;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{footer:Apolo Community™}{color:ff0000}]
+`
+})
+
+bot.Command({
+  name: "level",
+  code: `
+  Ucitava se....
+  `
+})
+
+bot.Command({
+  name: "@top",
+  code: `
+$author[Top Messages]
+$description[$replaceText[$userLeaderboard[MC;asc;**$ordinal[{top}] : {tag} - $numberSeparator[{value}]$getVar[msg]**];";]]
+$addTimestamp
+$color[ffd700]
+`
+})
+
+bot.Command({
+  name: "reset",
+  code: `
+  Leveling System resetovan.....
+  $resetUserVar[rank]
+  $resetUserVar[req]
+  $resetUserVar[lvl]
+  $resetUserVar[msg]
+$onlyPerms[administrator;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{footer:Apolo Community™}{color:ff0000}]
+  `
 })
 
 ////////HELP KOMANDE//////
@@ -113,8 +257,8 @@ $title[Pomoc]
 $footer[Apolo Community™;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
 $color[$random[0;999999]]
 $description[
-$addField[Komande za membere;<a:point:781135170052292609> **!!help clanovi** (Ovde su sve komande koje clanovi Apolo Community-a mogu da koriste)]
-$addField[Komande za staff;<a:point:781135170052292609> **!!help staff** (Ako si deo staffa moci ces da koristis ovu komandu)]]
+$addField[Komande za membere;<a:rainbow_right:803779739352825867> **!!help clanovi** (Ovde su sve komande koje clanovi Apolo Community-a mogu da koriste)]
+$addField[Komande za staff;<a:rainbow_right:803779739352825867> **!!help staff** (Ako si deo staffa moci ces da koristis ovu komandu)]]
 $onlyIf[$message[1]!=clanovi;{execute:clanovi}]
 $onlyIf[$message[1]!=staff;{execute:staff}]
 $onlyIf[$message[1]!=nema;{execute:nema}]
@@ -169,7 +313,7 @@ bot.ExecutableCommand({
   $title[Pomoc Clanovi]
   $footer[Aplo Community™ - strana 2/2;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
   $color[$random[0;999999]]
-  $description[<a:point:781135170052292609> **Trenutno je ova stranica prazna. Nove komande ce biti uskoro dodate. Hvala.**]
+  $description[<a:rainbow_right:803779739352825867> **Trenutno je ova stranica prazna. Nove komande ce biti uskoro dodate. Hvala.**]
   `
 })
 
@@ -192,53 +336,6 @@ $onlyForRoles[805343988344422440;805225433191940116;805220500728578088;805249119
 `
 })
 
-////////8 BALL POLL/PITAJ BOTA////////
-bot.Command({
-  name: "@pitaj",
-  code: `
-$title[$username[]#$discriminator[$authorID] je postavio/la pitanje]
-$footer[Pitanje postavio/la $username[]#$discriminator[$authorID];$userAvatar[userID;png;true;512]]
-$color[772773]
-$description[
-$addField[Odgovor bota:;$randomText[Da;Ne;Mozda;Ne moze;Naravno;Naravno da mozes;Kako da ne;Logicno;Moguce;Mozda;Ne znam;Nije mi jasno, ponovi pitanje;Hteo si odgovor, evo ti ga xD;Dobro;Lose;Ok;Nece;Hoce;Naravno da hoce;Ne verujem;jeste;nije;nema;nikako;ma kakvi;nema tebi spasa;Mozes da se kladis u to;Numero je najjaci;kobrad te voli;super;oladi;mars;nema teorije;hoces;neces;nemas sanse;nema sanse;100%;50%;10%;20%;30%;40%;60%;70%;80%;90%;ima;nema;laze;nije tako;tako je;moze;ne moze;mozes;ne mozes;naravno da ne moze;naravno da hoce;malo;naravno da je tako;nop;dap;yep;no no;da daaaa;nema sanse;ma kakvi;si ti lud?;znaci boze];no]]
-$addField[Pitanje:;$message[];no]
-$argsCheck[>1;Napisi neko pitanje koje ti padne na pamet]
-`
-})
-
-///$userAvatar[$replaceText[$replaceText[$checkCondition[$findUser[$message[]]==undefined];true;$authorID];false;$findUser[$message[]]];png;true;512]//////$userAvatar[$authorID]///
-bot.Command({
-   name: "@procenat",
-   code: `
-$title[$username[]#$discriminator[$authorID] je postavio/la pitanje]
-$footer[Pitanje postavio/la $username[]#$discriminator[$authorID];$userAvatar[userID;png;true;512]]
-$color[772773]
-$description[]
-$addField[Odgovor bota:;$random[0;100]%;no]
-$addField[Pitanje:;$message[];no]
-$argsCheck[>1;Napisi neko pitanje koje ti padne na pamet]
-`
-})
-
-////////PREDLOG KOMANDA///////
-bot.Command({
-  name: "@predlog",
-  code: `
-$useChannel[785258143882018836]
-$author[PAZNJA!!!]
-$title[Vreme je za glasanje!!!]
-$color[$random[0;999999]]
-$description[]
-$addField[Dostupni odgovori;Ne <a:up:781134690060075008> **|** Da <a:down:781134657919778816>;true]
-$addField[Kako glasati?;Kliknite nesto od ponudjenih reakcija dole;no]
-$addField[Glasanje;Jedno glasanje po memberu. Ako hocete da promenite svoje misljenje onda kliknite reakciju koju ste prethodno stisnuli pa onda novu. Hvala :heart:;no]
-$footer[Kada procitate sve onda glasajte!:https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
-$addField[Tema:;**$message[]**;no]
-$addReactions[781134690060075008;781134657919778816]
-$argsCheck[>1;**nisi tacno napisao komandu - Probaj ovako: !!predlog {napisi sta hoces za glasanje}**]
-`
-})
-
 ///////TAG BOTA ZA HELP///////
 bot.SpaceCommand({
 name: "mentionhelp",
@@ -248,16 +345,16 @@ $onlyIfMessageContains[<@!$client[id]>;<@$client[id]>;]
 `
 })
 
-bot.SpaceCommand({
-  name: "randomemoji",
-  code: `
-  $setUserVar[req;$multi[$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];2]]
-  $setUserVar[rank;$sum[$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]];1]]
-  $onlyIf[$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]>=$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];]
-  $setUserVar[msg;$sum[$getUserVar[msg];1]]
-  $setUserVar[lvl;$sum[$getUserVar[lvl];$random[10;30]]]
-  `
-})
+//bot.SpaceCommand({//
+//  name: "leveling",//
+//  code: `//
+///$setUserVar[req;$multi[$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];2]]//
+ // $setUserVar[rank;$sum[$getUserVar[rank;$replaceText[$findUser[$message[]];undefined;$authorID]];1]]//
+//  $onlyIf[$getUserVar[lvl;$replaceText[$findUser[$message[]];undefined;$authorID]]>=$getUserVar[req;$replaceText[$findUser[$message[]];undefined;$authorID]];]//
+//  $setUserVar[msg;$sum[$getUserVar[msg];1]]//
+//  $setUserVar[lvl;$sum[$getUserVar[lvl];$random[10;30]]]//
+//  `//
+///})/////
 
 /////KOMANDA DA DOBIJEM EMOJI ID/////////
 bot.Command({  
