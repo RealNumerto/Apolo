@@ -4,6 +4,7 @@ module.exports = ({
 $unmute[$findUser[$message[1]];$roleID[Muted];$replaceText[$replaceText[$checkCondition[$messageSlice[>1]==];true;Nije napisano];false;( By: $username[]#$discriminator[] ) - Automatski unmute]]
 $channelSendMessage[$channelID[];{author:Auto Unmute}{authoricon:https://media.discordapp.net/attachments/805212375133061161/807591306280304660/gif_apolo.gif}{description:**<@$findUser[$message[1]]> je automatski unmutiran!**}{thumbnail:$userAvatar[$findUser[$message[1]];png;true;512]}{color:00ff00}{footer:$serverName[]}{footericon:https://media.discordapp.net/attachments/805212375133061161/807591306280304660/gif_apolo.gif}]
 $replyIn[$message[2]]
+$onlyIf[$hasRole[$authorID;$roleID[Muted]]==true;]
 
 $channelSendMessage[$getServerVar[regmodlogs];
 {author:Moderator komanda izvršena: Mute Komanda} 
