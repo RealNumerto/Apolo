@@ -1,7 +1,6 @@
 module.exports = ({
   name: "ban",
   code: `
-
   $ban[$findUser[$message[1]];$replaceText[$replaceText[$checkCondition[$messageSlice[>1]==];true;Nije napisano];false;( By: $username[]#$discriminator[] ) - $messageSlice[>1]]]
 
  $author[Ban sa servera Apolo Community™;https://media.discordapp.net/attachments/805212375133061161/807591306280304660/gif_apolo.gif]
