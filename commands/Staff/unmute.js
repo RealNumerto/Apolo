@@ -6,7 +6,7 @@ module.exports = ({
 {thumbnail:$serverIcon}{authoricon:https://cdn.discordapp.com/attachments/551653964597428225/814228124471787590/6773_Alert.png}
  
 {field:Unmutovan/a: **$tag[$mentioned[1]]**:no}
-{field:Razlog:$replaceText[$replaceText[$checkCondition[$messageSlice[>2]==];true;bez razloga];false;$messageSlice[>2]]:no}
+{field:Razlog:$replaceText[$replaceText[$checkCondition[$messageSlice[>1]==];true;Nije napisano];false;$messageSlice[>1]]:no}
 {field:Moderator: **$tag[$authorID]**:no}
 {field:ID-ovi:\`\`\`
 User ID = $mentioned[1]
