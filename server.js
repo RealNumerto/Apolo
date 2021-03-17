@@ -67,6 +67,46 @@ $useChannel[805225522636390410]
 })
 bot.onJoined()
 
+bot.UserUpdateCommand({
+name: "817394678173270047",
+description: "Promena taga",
+code: `
+{mention} je promenuo/la njegov/njen tag!
+$title[User+Tag sada - {tag}]
+$color[ff0000]
+$thumbnail[$userAvatar[$get[ID]]]
+$description[
+Stari tag - **#{olddiscrim}**
+Novi tag - **#{newdiscrim}**]
+
+$let[ID;{id}]
+
+$onlyIf[$checkCondition[$get[oldname]==$get[newname]]==true;]
+$onlyIf[$checkCondition[$get[oldavatar]==$get[newavatar]]==true;]
+
+$let[newname;{newname}] $let[oldname;{oldname}]
+$let[newname;{newavatar}] $let[oldavatar;{oldavatar}]
+`
+})
+bot.onUserUpdate()
+
+bot.UserUpdateCommand({
+name: "817394678173270047",
+description: "Promena nicka",
+code: `
+{mention} je promenuo/la svoj nick!
+$title[User+Tag sada - {tag}]
+$color[ff0000]
+$thumbnail[$userAvatar[$get[ID]]]
+$description[
+Staro ime - **{oldname}**
+Novo ime - **{newname}**]
+
+$let[newname;{id}]
+`
+})
+bot.onUserUpdate()
+
 ////////BOT PING//////
 bot.Command({
   name: "ping",
