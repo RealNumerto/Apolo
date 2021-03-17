@@ -32,6 +32,7 @@ $onlyIf[$mentioned[1]!=$client[id];Što bih ja dobio upozorenje?]
 $onlyIf[$mentioned[1]!=$authorID;Ne možes sam sebe da upozoriš.]
 $onlyIf[$mentioned[1]!=;Taguj nekoga da bih ga/je upozorio.]
 $onlyIf[$getServerVar[regmodlogs]!=Nije setovan kanal za logovanje. Setuj komandom: **$getServerVar[prefix]setlogs <#mention-channel>**]
+$onlyIf[$getServerVar[regmodlogs]!={title:Greška}{description:Nije setovan kanal za logovanje. Setuj komandom: **$getServerVar[prefix]setlogs <#taguj kanal>**.}{footer:$serverName[]}{color:ff0000}]
 $onlyBotPerms[managemessages;{title:Perms Greška}{description::x:Bot Nema \`Manage Messages\` Permisiju}{footer:Apolo Community™}{color:ff0000}]
 $onlyPerms[managemessages;{title:Perms Greška}{description::x:Nemaš dozvolu da koristiš ovu komandu}{footer:Apolo Community™}{color:ff0000}]
 
