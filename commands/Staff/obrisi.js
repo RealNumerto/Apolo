@@ -17,7 +17,8 @@ module.exports = ({
  $color[00ff00]
  $onlyIf[$isNumber[$message[]]==true;{title:Greška}{description:To Nije Validan Broj!}{footer:Apolo Community™}{color:ff0000}]
  $onlyIf[$message[]!=;{title:Greška}{description:Nisi Napisao/la Koliko Poruka Oćeš Da Obrišeš}{footer:Apolo Community™}{color:ff0000}]
- $onlyBotPerms[managemessages;{title:Perms Greška}{description::x:Bot Nema \`Manage Permissions\` Permisiju}{footer:Apolo Community™}{color:ff0000}]
+$onlyIf[$getServerVar[regmodlogs]!={title:Greška}{description:Nije setovan kanal za logovanje. Setuj komandom: **$getServerVar[prefix]setlogs <#taguj kanal>**.}{footer:$serverName[]}{color:ff0000}] 
+$onlyBotPerms[managemessages;{title:Perms Greška}{description::x:Bot Nema \`Manage Permissions\` Permisiju}{footer:Apolo Community™}{color:ff0000}]
  $onlyForRoles[809542479384281119;805395974759383042;805249119786369024;805225433191940116;805220500728578088;{title::x: Greška!}{description:**Nemaš dozvolu da koristiš ovu komandu!!!**}{footer:Apolo Community™}{color:ff0000}]
  
  $suppressErrors[{title:Greška?}{description:Nešto nije u redu. Ako se ovo nastavi, kontaktiraj bot developera.}{color:RED}]
