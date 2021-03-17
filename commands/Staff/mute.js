@@ -34,6 +34,7 @@ $onlyIf[$rolePosition[$highestRole[$client[id]]]<$rolePosition[$roleID[Muted]];{
 $onlyIf[$rolePosition[$highestRole[$client[id]]]<$rolePosition[$highestRole[$findUser[$message[1]]]];{title::x: Greška!}{description:**Moj role nije iznad rola od <@$findUser[$message[1]]>!**}{footer:Apolo Community™}{color:ff0000}]
 $onlyIf[$roleExists[Muted]==true;{title::x: Greška!}{description:**Muted role ne postoji!**}{footer:Apolo Community™}{color:ff0000}]
 $onlyIf[$userExists[$findUser[$message[1]]]==true;{title::x: Greška!}{description:**Ta osoba ne postoji ili nije na serveru.** \n\`$getServerVar[prefix]mute <@user> <vreme> <razlog>\`}{footer:Apolo Community™}{color:ff0000}]
+$onlyIf[$getServerVar[regmodlogs]!={title:Greška}{description:Nije setovan kanal za logovanje. Setuj komandom: **$getServerVar[prefix]setlogs <#taguj kanal>**.}{footer:$serverName[]}{color:ff0000}]
 $onlyBotPerms[manageroles;{title::x: Greška!}{description:**Tebam imati __Manage Roles__ permisiju da bih mutovao!**}{footer:Apolo Community™}{color:ff0000}]
 $onlyForRoles[809542479384281119;809542278774915185;805395974759383042;805249119786369024;805225433191940116;805220500728578088;{title::x: Greška!}{description:**Nemaš dozvolu da koristiš ovu komandu!!!**}{footer:Apolo Community™}{color:ff0000}]
 
