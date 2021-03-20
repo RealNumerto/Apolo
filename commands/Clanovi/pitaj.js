@@ -1,5 +1,6 @@
 module.exports = ({
   name: "pitaj",
+  aliases: "pitanje",
   code: `
 $title[$username[]#$discriminator[$authorID] je postavio/la pitanje]
 $footer[Pitanje postavio/la $username[]#$discriminator[$authorID];$userAvatar[userID;png;true;512]]
