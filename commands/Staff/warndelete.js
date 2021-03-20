@@ -1,7 +1,9 @@
 module.exports = ({
   name: "rwarn",
   code: `
-  Uspesko obrisana upozorenja gospodinu/gospodji <@$findUser[$message[1]]>
-  $resetUserVar[warnings]
+  Uspesno obrisana upozorenja gospodinu/gospodji <@$findUser[$message[1]]>
+  $setUserVar[warnings;0;$findUser[$message[1]]]
+  $onlyIf[$mentioned[1]!=;Taguj osobu kojoj zelis da obrises upozorenja.]
+  $onlyPerms[administrator;No No No No No]
   `
 })
