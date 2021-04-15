@@ -2,7 +2,7 @@ module.exports = ({
   name: "dmads",
   code: `
 $channelSendMessage[$getServerVar[regmodlogs];
-{author:Moderator komanda izvršena: "Ban" Komanda} 
+{author:Moderator komanda izvršena: DmAds Komanda} 
 {thumbnail:$serverIcon}{authoricon:https://cdn.discordapp.com/attachments/551653964597428225/814228124471787590/6773_Alert.png}
  
 {field:"Banovan/a":**$tag[$findUser[$message[1]]]**:no}
