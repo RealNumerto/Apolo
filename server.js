@@ -39,7 +39,7 @@ bot.Variables({
 ////////BOT STATUS///////
 bot.Status({
         0: {
-            description: "👑Apolo Kingdom™👑 | !!help", 
+            description: "👑Apolo Imperia™👑 | !!help", 
             type: "PLAYING" 
         },
         1: {
@@ -72,56 +72,138 @@ $useChannel[805225522636390410]
 })
 bot.onJoined()
 
-bot.UserUpdateCommand({
-name: "817394678173270047",
-description: "Promena taga",
-code: `
-{mention} je promenuo/la njegov/njen tag!
-$title[User+Tag sada - {tag}]
-$color[ff0000]
-$thumbnail[$userAvatar[$get[ID]]]
-$description[
-Stari tag - **#{olddiscrim}**
-Novi tag - **#{newdiscrim}**]
+//-------------------------------------------//
 
-$let[ID;{id}]
+//bot.UserUpdateCommand({
+//name: "817394678173270047",
+//description: "Promena taga",
+//code: `
+//{mention} je promenuo/la njegov/njen tag!
+//$title[User+Tag sada - {tag}]
+//$color[ff0000]
+//$thumbnail[$userAvatar[$get[ID]]]
+//$description[
+//Stari tag - **#{olddiscrim}**
+//Novi tag - **#{newdiscrim}**]
 
-$onlyIf[$checkCondition[$get[oldname]==$get[newname]]==true;]
-$onlyIf[$checkCondition[$get[oldavatar]==$get[newavatar]]==true;]
+//$let[ID;{id}]
 
-$let[newname;{newname}]
-$let[oldname;{oldname}]
-$let[newavatar;{newavatar}]
-$let[oldavatar;{oldavatar}]
-`
-})
+//$onlyIf[$checkCondition[$get[oldname]==$get[newname]]==true;]
+//$onlyIf[$checkCondition[$get[oldavatar]==$get[newavatar]]==true;]
 
-bot.UserUpdateCommand({
-name: "817394678173270047",
-description: "Promena nicka",
-code: `
-{mention} je promenuo/la svoj nick!
-$title[User+Tag sada - {tag}]
-$color[ff0000]
-$thumbnail[$userAvatar[$replaceText[$replaceText[$checkCondition[$get[ID]==undefined];true;$get[ID]];false;$get[ID]];png;true;512]]
-$description[
-Staro ime - **{oldname}**
-Novo ime - **{newname}**]
+//$let[newname;{newname}]
+//$let[oldname;{oldname}]
+//$let[newavatar;{newavatar}]
+//$let[oldavatar;{oldavatar}]
+//`
+//})
 
-$let[ID;{id}]
+//-------------------------------------------//
 
-$onlyIf[$checkCondition[$get[olddiscrim]==$get[newdiscrim]]==true;]
-$onlyIf[$checkCondition[$get[oldavatar]==$get[newavatar]]==true;]
+//bot.UserUpdateCommand({
+//name: "817394678173270047",
+//description: "Promena nicka",
+//code: `
+//{mention} je promenuo/la svoj nick!
+//$title[User+Tag sada - {tag}]
+//$color[ff0000]
+//$thumbnail[$userAvatar[$replaceText[$replaceText[$checkCondition[$get[ID]==undefined];true;$get[ID]];false;$get[ID]];png;true;512]]
+//$description[
+//Staro ime - **{oldname}**
+//Novo ime - **{newname}**]
 
-$let[newdiscrim;{newdiscrim}]
-$let[olddiscrim;{olddiscrim}]
-$let[newavatar;{newavatar}]
-$let[oldavatar;{oldavatar}]
-`
-})
+//$let[ID;{id}]
+
+//$onlyIf[$checkCondition[$get[olddiscrim]==$get[newdiscrim]]==true;]
+//$onlyIf[$checkCondition[$get[oldavatar]==$get[newavatar]]==true;]
+
+//$let[newdiscrim;{newdiscrim}]
+//$let[olddiscrim;{olddiscrim}]
+//$let[newavatar;{newavatar}]
+//$let[oldavatar;{oldavatar}]
+//`
+//})
+
+//-------------------------------------------//
+
 //$onlyIf[$get[{newname}]!=$get[{oldname}];]//
 
 //$userAvatar[$replaceText[$replaceText[$checkCondition[$get[ID]==undefined];true;$get[ID]];false;$get[ID]];png;true;512]//
+
+//-------------------------------------------//
+
+////////HELP KOMANDE//////
+bot.ExecutableCommand({
+  name: "nema",
+  code: `
+  $title[Music Pomoc]
+$footer[$serverName[] Music;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$color[$random[0;999999]]
+$description[<a:desno:800552273955782666> ** $getServerVar[prefix]play** - Pustajte muziku u Voice Kanalu.
+<a:desno:800552273955782666> ** $getServerVar[prefix]search** - Slicno kao \`$getServerVar[prefix]play\` samo sto ovde kada kucate koju muziku hocete bot vam ponudi vise opcija dok sa \`!!play\` bot pusti brvu muziku koju vidi.
+<a:desno:800552273955782666> ** $getServerVar[prefix]pause** - Da pauzirate trenutnu muziku.
+<a:desno:800552273955782666> ** $getServerVar[prefix]resume** - Da pokrenete pauziranu muziku.
+<a:desno:800552273955782666> ** $getServerVar[prefix]queue** - Da vidite pesme/muzike koje su u playlisti.
+<a:desno:800552273955782666> ** $getServerVar[prefix]clear-queue** - Da obrisete celu playlistu.
+<a:desno:800552273955782666> ** $getServerVar[prefix]shuffle** - Da izmesate redosled playliste.
+<a:desno:800552273955782666> ** $getServerVar[prefix]loop** - Da bi omogucili ili onemogucili ponavljanje muzike.
+<a:desno:800552273955782666> ** $getServerVar[prefix]volume** - Da postavite jacinu muzike.
+<a:desno:800552273955782666> ** $getServerVar[prefix]skip** - Da predjete na sledecu musizku.
+<a:desno:800552273955782666> ** $getServerVar[prefix]stop** - Da stopirate svu muziku.]
+  `
+})
+
+bot.ExecutableCommand({
+  name: "clanovi",
+  code: `
+$title[Clanovi Pomoc]
+$footer[$serverName[] - strana 1/2 (da vidis drugu stranu kucaj > !!help clanovi 2 <);https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$color[$random[0;999999]]
+$description[<a:desno:800552273955782666> ** $getServerVar[prefix]pitaj** - ako hoces da se zajebavas sa botom (odgovori su skroz random) (vecinom nemaju smisla).
+<a:desno:800552273955782666> ** $getServerVar[prefix]procenat** - ako hoces da ti bot odgovori na pitanje u procentima. (odgovori su skroz random) (vecinom nemaju smisla).
+<a:desno:800552273955782666> ** $getServerVar[prefix]avatar ili $getServerVar[prefix]av** - da vidis svoj ili neciji avatar
+<a:desno:800552273955782666> ** $getServerVar[prefix]botinfo** - da dobije informacije o **Apolo™** botu.
+<a:desno:800552273955782666> ** $getServerVar[prefix]poruke** (ne radi) - da vidite koliko poruka ste poslali.
+<a:desno:800552273955782666> ** $getServerVar[prefix]poeni** (ne radi) - da vidite koliko poena imate.
+<a:desno:800552273955782666> ** $getServerVar[prefix]level** (ne radi) - da vidite koji ste level.
+<a:desno:800552273955782666> ** $getServerVar[prefix]profil** (ne radi) - da vidite profil od nekoga ili od sebe, vidite njegov/njen poene, levele i poruke koliko ima.
+<a:desno:800552273955782666> ** $getServerVar[prefix]top** (ne radi) - Top liste poruka, levela i poena.
+<a:desno:800552273955782666> ** $getServerVar[prefix]userinfo** - Informacije o nekome (kada je usao/la na server, kada je napravljen acc).
+<a:desno:800552273955782666> ** $getServerVar[prefix]serverinfo** - Informacije o serveru.
+<a:desno:800552273955782666> ** $getServerVar[prefix]kpm** - Kamen, Papir, Makaze igra.]
+$onlyIf[$message[2]!=2;{execute:clanovi2}]
+`
+})
+
+bot.ExecutableCommand({
+  name: "clanovi2",
+  code: `
+  $title[Pomoc Clanovi]
+  $footer[$serverName[] - strana 2/2;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+  $color[$random[0;999999]]
+  $description[<a:desno:800552273955782666> **Trenutno je ova stranica prazna. Nove komande ce biti uskoro dodate. Hvala.**]
+  `
+})
+
+bot.ExecutableCommand({
+  name: "staff",
+  code: `
+$title[Staff Pomoc]
+$footer[$serverName[];https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
+$color[$random[0;999999]]
+$description[<a:desno:800552273955782666> ** $getServerVar[prefix]obrisi** ili **$getServerVar[prefix]obrisati** - Ova komanda je za brisanje poruka.
+<a:desno:800552273955782666> ** $getServerVar[prefix]mute** - da mutirtas nekoga na neko vreme.
+<a:desno:800552273955782666> ** $getServerVar[prefix]unmute** - da unmutiras nekoga.
+<a:desno:800552273955782666> ** $getServerVar[prefix]ban** - da banujes nekoga.
+<a:desno:800552273955782666> ** $getServerVar[prefix]unban** - da unbanujes nekoga.
+<a:desno:800552273955782666> ** $getServerVar[prefix]lock** - da zakljucas trenutni kanal.
+<a:desno:800552273955782666> ** $getServerVar[prefix]unlock** - da otkljucas trenutni kanal.
+<a:desno:800552273955782666> ** $getServerVar[prefix]warn** - da upozoris nekoga.
+<a:desno:800552273955782666> ** $getServerVar[prefix]setlogs** - da setujes log kanal.
+<a:desno:800552273955782666> ** $getServerVar[prefix]dmads** - da banujete one koji se reklamiraju u DM]
+$onlyForRoles[805343988344422440;805225433191940116;805220500728578088;805249119786369024;805395974759383042;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
+`
+})
 
 ////////BOT PING//////
 bot.Command({
@@ -130,6 +212,14 @@ bot.Command({
   :white_check_mark: - Bot Ping : **$pingms** !
    
   Uptime: $replaceText[$replaceText[$replaceText[$uptime;d;d ];h;h ];m;m ]
+  `
+})
+
+bot.Command({
+  name: "dm",
+  code: `
+  $dm[$message[1]]
+  $messageSlice[>1]
   `
 })
 
@@ -318,77 +408,6 @@ $addField[Komande za staff;<a:desno:800552273955782666> **$getServerVar[prefix]h
 $onlyIf[$message[1]!=clanovi;{execute:clanovi}]
 $onlyIf[$message[1]!=staff;{execute:staff}]
 $onlyIf[$message[1]!=nema;{execute:nema}]
-`
-})
-
-bot.ExecutableCommand({
-  name: "nema",
-  code: `
-  $title[Music Pomoc]
-$footer[$serverName[] Music;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
-$color[$random[0;999999]]
-$description[<a:desno:800552273955782666> ** $getServerVar[prefix]play** - Pustajte muziku u Voice Kanalu.
-<a:desno:800552273955782666> ** $getServerVar[prefix]search** - Slicno kao \`$getServerVar[prefix]play\` samo sto ovde kada kucate koju muziku hocete bot vam ponudi vise opcija dok sa \`!!play\` bot pusti brvu muziku koju vidi.
-<a:desno:800552273955782666> ** $getServerVar[prefix]pause** - Da pauzirate trenutnu muziku.
-<a:desno:800552273955782666> ** $getServerVar[prefix]resume** - Da pokrenete pauziranu muziku.
-<a:desno:800552273955782666> ** $getServerVar[prefix]queue** - Da vidite pesme/muzike koje su u playlisti.
-<a:desno:800552273955782666> ** $getServerVar[prefix]clear-queue** - Da obrisete celu playlistu.
-<a:desno:800552273955782666> ** $getServerVar[prefix]shuffle** - Da izmesate redosled playliste.
-<a:desno:800552273955782666> ** $getServerVar[prefix]loop** - Da bi omogucili ili onemogucili ponavljanje muzike.
-<a:desno:800552273955782666> ** $getServerVar[prefix]volume** - Da postavite jacinu muzike.
-<a:desno:800552273955782666> ** $getServerVar[prefix]skip** - Da predjete na sledecu musizku.
-<a:desno:800552273955782666> ** $getServerVar[prefix]stop** - Da stopirate svu muziku.]
-  `
-})
-
-bot.ExecutableCommand({
-  name: "clanovi",
-  code: `
-$title[Clanovi Pomoc]
-$footer[$serverName[] - strana 1/2 (da vidis drugu stranu kucaj > !!help clanovi 2 <);https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
-$color[$random[0;999999]]
-$description[<a:desno:800552273955782666> ** $getServerVar[prefix]pitaj** - ako hoces da se zajebavas sa botom (odgovori su skroz random) (vecinom nemaju smisla).
-<a:desno:800552273955782666> ** $getServerVar[prefix]procenat** - ako hoces da ti bot odgovori na pitanje u procentima. (odgovori su skroz random) (vecinom nemaju smisla).
-<a:desno:800552273955782666> ** $getServerVar[prefix]avatar ili $getServerVar[prefix]av** - da vidis svoj ili neciji avatar
-<a:desno:800552273955782666> ** $getServerVar[prefix]botinfo** - da dobije informacije o **Apolo™** botu.
-<a:desno:800552273955782666> ** $getServerVar[prefix]poruke** (ne radi) - da vidite koliko poruka ste poslali.
-<a:desno:800552273955782666> ** $getServerVar[prefix]poeni** (ne radi) - da vidite koliko poena imate.
-<a:desno:800552273955782666> ** $getServerVar[prefix]level** (ne radi) - da vidite koji ste level.
-<a:desno:800552273955782666> ** $getServerVar[prefix]profil** (ne radi) - da vidite profil od nekoga ili od sebe, vidite njegov/njen poene, levele i poruke koliko ima.
-<a:desno:800552273955782666> ** $getServerVar[prefix]top** (ne radi) - Top liste poruka, levela i poena.
-<a:desno:800552273955782666> ** $getServerVar[prefix]userinfo** - Informacije o nekome (kada je usao/la na server, kada je napravljen acc).
-<a:desno:800552273955782666> ** $getServerVar[prefix]serverinfo** - Informacije o serveru.
-<a:desno:800552273955782666> ** $getServerVar[prefix]kpm** - Kamen, Papir, Makaze igra.]
-$onlyIf[$message[2]!=2;{execute:clanovi2}]
-`
-})
-
-bot.ExecutableCommand({
-  name: "clanovi2",
-  code: `
-  $title[Pomoc Clanovi]
-  $footer[$serverName[] - strana 2/2;https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
-  $color[$random[0;999999]]
-  $description[<a:desno:800552273955782666> **Trenutno je ova stranica prazna. Nove komande ce biti uskoro dodate. Hvala.**]
-  `
-})
-
-bot.ExecutableCommand({
-  name: "staff",
-  code: `
-$title[Staff Pomoc]
-$footer[$serverName[];https://media.discordapp.net/attachments/794585038812479539/796688558869446666/gif_apolo.gif]
-$color[$random[0;999999]]
-$description[<a:desno:800552273955782666> ** $getServerVar[prefix]obrisi** ili **$getServerVar[prefix]obrisati** - Ova komanda je za brisanje poruka.
-<a:desno:800552273955782666> ** $getServerVar[prefix]mute** - da mutirtas nekoga na neko vreme.
-<a:desno:800552273955782666> ** $getServerVar[prefix]unmute** - da unmutiras nekoga.
-<a:desno:800552273955782666> ** $getServerVar[prefix]ban** - da banujes nekoga.
-<a:desno:800552273955782666> ** $getServerVar[prefix]unban** - da unbanujes nekoga.
-<a:desno:800552273955782666> ** $getServerVar[prefix]lock** - da zakljucas trenutni kanal.
-<a:desno:800552273955782666> ** $getServerVar[prefix]unlock** - da otkljucas trenutni kanal.
-<a:desno:800552273955782666> ** $getServerVar[prefix]warn** - da upozoris nekoga.
-<a:desno:800552273955782666> ** $getServerVar[prefix]setlogs** - da setujes log kanal.]
-$onlyForRoles[805343988344422440;805225433191940116;805220500728578088;805249119786369024;805395974759383042;**:x: Nemas dozvolu da koristis ovu komandu!!!**]
 `
 })
 
